@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}" />
+        <title> Show Usuario </title>
+    </head>
+    <body>
+        <div>
+            <h2>User {{usuario.id}}</h2>
+        </div>
+        <div class="caja">
+            <div class="resultado">
+                <p class="info">
+                        Full Name {{ usuario['nombre'] }} {{ usuario['apellido'] }}
+                    </p>
+                    <p class="info">
+                        Email: {{ usuario['email'] }} 
+                    </p>
+                    <p class="info">
+                        Created ON: {{  usuario.updated_at.strftime("%b %d %Y")}}
+                    </p>
+                    <p class="info">
+                        Last Updated: {{  usuario.updated_at.strftime("%b %d %Y")}}
+                    </p>
+            </div>
+            <div class="bactions">
+                <a href="/usuario/editar/{{usuario.id}} ">
+                    Edit
+                </a>
+                <form method="POST" action="/usuario/remover/{{usuario.id}}">
+                    <button class="button">
+                        Delete
+                    </button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

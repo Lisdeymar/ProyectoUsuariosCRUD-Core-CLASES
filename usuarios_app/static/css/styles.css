@@ -1,0 +1,80 @@
+.body{
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.registrosecc{
+    display: flex;
+    flex-direction: column;
+}
+
+.benviar{
+    background-color: green; /*color fondo*/
+    color: white; /*color letra*/
+    border: green;
+    border-radius: 3px; /*esquina circulado*/
+}
+
+/*Dashboard*/
+.body1{
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+body > h1 {
+    text-align: center;
+}
+.bañadir{
+    background-color: rgb(21, 124, 241); /*color fondo*/
+    color: white; /*color letra*/
+    border: rgb(21, 124, 241);
+    border-radius: 3px; /*esquina circulado*/
+}
+
+.bactions{
+    display: flex;
+}
+
+.button{
+    background-color: white; /*color fondo*/
+    border: white;
+    color: rgb(21, 124, 241); /*color letra*/
+    text-decoration: underline rgb(21, 124, 241); /*subrayado*/
+}
+
+
+.registrosecc3{
+    display: flex;
+}
+
+/*Editar*/
+
+.bactualizar{
+    height: 30px;
+    margin: 5px 0px;
+    background-color: green; /*color fondo*/
+    color: white; /*color letra*/
+    border: green;
+    border-radius: 3px; /*esquina circulado*/
+}
+
+.breshow{
+    width: 80px;
+    height: 30px;
+    margin: 5px;
+    text-align: center;
+    text-decoration: none;
+    background-color: rgb(19, 218, 253); /*color fondo*/
+    color: black; /*color letra*/
+    border: rgb(19, 218, 253);
+    border-radius: 3px; /*esquina circulado*/
+}
+
+/*Show*/
+div > h2 {
+    text-align: center;
+}

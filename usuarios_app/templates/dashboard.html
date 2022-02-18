@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}" />
+        <title> Portal Usuarios </title>
+    </head>
+    <body class="body1">
+        <h1>
+            Here are our users!!!
+        </h1>
+        <table>
+            <thead>
+                <tr class="theadtr">
+                    <th class="titulo">First Name</th>
+                    <th class="titulo">Last Name</th>
+                    <th class="titulo">Email</th>
+                    <th class="titulo">Created At</th>
+                    <th class="titulo">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for usuario in usuarios %}
+                    <tr>
+                        <td>{{usuario['nombre']}}</td>
+                        <td>{{usuario['apellido']}}</td>
+                        <td>{{usuario['email']}}</td>
+                        <td>{{usuario['updated_at'].strftime("%b %d %Y")}}</td>
+                        <td>
+                            <div class="bactions">
+                                <form method="GET" action="/usuario/show/{{usuario.id}} ">
+                                    <button class="button">
+                                        Show
+                                    </button>
+                                </form>
+                                <form method="GET" action="/usuario/editar/{{usuario.id}} ">
+                                    <button class="button">
+                                        Edit
+                                    </button>
+                                </form>
+                                <form method="POST" action="/usuario/remover/{{usuario.id}}">
+                                    <button class="button">
+                                        Delete
+                                    </button>
+                                </form>
+                            </div>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <form method="GET" action="/">
+            <button class="bañadir">
+                Add a User
+            </button>
+        </form>
+    </body>
+</html>
