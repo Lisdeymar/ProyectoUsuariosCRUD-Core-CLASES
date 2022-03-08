@@ -14,17 +14,17 @@
         <div class="caja">
             <div class="resultado">
                 <p class="info">
-                        Full Name {{ usuario['nombre'] }} {{ usuario['apellido'] }}
-                    </p>
-                    <p class="info">
-                        Email: {{ usuario['email'] }} 
-                    </p>
-                    <p class="info">
-                        Created ON: {{  usuario.updated_at.strftime("%b %d %Y")}}
-                    </p>
-                    <p class="info">
-                        Last Updated: {{  usuario.updated_at.strftime("%b %d %Y")}}
-                    </p>
+                    Full Name {{ usuario['nombre'] }} {{ usuario['apellido'] }}
+                </p>
+                <p class="info">
+                    Email: {{ usuario['email'] }} 
+                </p>
+                <p class="info">
+                    Created ON: {{  usuario.updated_at.strftime("%b %d %Y")}}
+                </p>
+                <p class="info">
+                    Last Updated: {{  usuario.updated_at.strftime("%b %d %Y")}}
+                </p>
             </div>
             <div class="bactions">
                 <a href="/usuario/editar/{{usuario.id}} ">
